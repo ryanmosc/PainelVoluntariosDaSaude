@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Voluntários da Saúde</title>
+  
+  <!-- Fonts e Ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- CSS Externo -->
+  <link rel="stylesheet" href="src/styles/login.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-header">
+      <i class="fas fa-user-shield"></i>
+      <h1>Área Restrita</h1>
+      <p>Acesso exclusivo para administradores</p>
+    </div>
+
+    <div class="login-body">
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="login">Usuário</label>
+          <div class="input-wrapper">
+            <i class="fas fa-user"></i>
+            <input type="text" id="login" name="login" placeholder="Digite seu login" required autocomplete="username">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <div class="input-wrapper">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="password" name="password" placeholder="Digite sua senha" required autocomplete="current-password">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submitBtn">
+          <span class="btn-text">
+            <i class="fas fa-sign-in-alt"></i> Entrar
+          </span>
+          <span class="loading">
+            <div class="spinner"></div> Autenticando...
+          </span>
+        </button>
+
+        <div class="error-message" id="errorMessage">
+          <i class="fas fa-exclamation-circle"></i>
+          <span id="errorText"></span>
+        </div>
+      </form>
+    </div>
+
+    <div class="footer">
+      Voluntários da Saúde © 2025
+    </div>
+  </div>
+
+  <!-- JavaScript Externo -->
+  <script src="src/scripts/login.js" defer></script>
+</body>
+</html>
